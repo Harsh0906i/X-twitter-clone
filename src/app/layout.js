@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
               <News />
             </div>
           </div>
-          <Comment/>
+          <Comment />
         </body>
       </html>
     </SessionWrapper>
