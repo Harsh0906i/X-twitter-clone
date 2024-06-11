@@ -8,6 +8,7 @@ export default function News() {
         fetch('https://saurav.tech/NewsAPI/top-headlines/category/business/us.json')
             .then((res) => res.json())
             .then((data) => { setnews(data.articles) })
+        // console.log(data)
     }, [])
     return (
         <div className='tex tex-gray-700 space-y-3 pt-2 bg-gray-100 rounded-xl mt-3'>
@@ -15,7 +16,7 @@ export default function News() {
             {
                 news.slice(0, article).map((articles) => (
                     <div>
-                        <a href={articles.url}>
+                        <a href={articles.url} key={articles.id}>
                             <div className='flex items-center justify-center'>
                                 <div className='p-2 mt-2'>
                                     <h6 className='f font-semibold text-sm'>{articles.title}</h6>
