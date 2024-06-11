@@ -7,8 +7,6 @@ import { GoHomeFill } from 'react-icons/go';
 import { BsThreeDots } from "react-icons/bs";
 export default function Sidebar() {
   const { data: session } = useSession();
-  console.log(session);
-
   return (
     <div className='flex flex-col p-3 justify-between h-screen'>
       <div className='flex flex-col gap-4 p-3'>
