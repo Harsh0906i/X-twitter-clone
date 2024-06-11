@@ -51,7 +51,7 @@ export default function Icons({ id, uid }) {
     async function deletePost() {
         if (session?.user?.uid === uid) {
             if (window.confirm('Are you sure you want to delete this post?')) {
-                deleteDoc(doc(db, 'posts', id)).then(() => console.log('deleted!'));
+                await deleteDoc(doc(db, 'posts', id)).then(() => console.log('deleted!'));
                 window.location.reload();
             }
         }
