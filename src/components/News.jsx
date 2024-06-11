@@ -28,6 +28,7 @@ export default function News() {
                         </a>
                     </div>
                 ))
+
             }
             <button onClick={() => setarticle(article + 3)} className='text-blue-400 pl-4 pb-3 hover:text-blue-500'>Load more</button>
         </div>
